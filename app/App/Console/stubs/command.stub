@@ -1,0 +1,35 @@
+<?php
+
+namespace App\Console\Commands;
+
+use App\Console\Command;
+use Symfony\Component\Console\Input\InputOption;
+use Symfony\Component\Console\Input\InputArgument;
+use Symfony\Component\Console\Input\InputInterface;
+use Symfony\Component\Console\Output\OutputInterface;
+
+class DummyClass extends Command
+{
+    protected $command = "command:name";
+
+    protected $description = "Command description.";
+
+    public function handle(InputInterface $input, OutputInterface $output)
+    {
+        //
+    }
+
+    protected function arguments(): array
+    {
+        return [
+            //
+        ];
+    }
+
+    protected function options(): array
+    {
+        return [
+            //
+        ];
+    }
+}

@@ -1,0 +1,13 @@
+#!/usr/bin/env php
+<?php
+
+require __DIR__ . "/bootstrap/app.php";
+
+const VERSION = "v1.0.0";
+
+$kernel = new App\Console\Kernel;
+
+$console = new App\Console\Console($app, VERSION);
+$console->boot($kernel);
+
+$console->run();

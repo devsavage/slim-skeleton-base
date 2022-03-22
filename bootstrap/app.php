@@ -29,3 +29,6 @@ $app->addBodyParsingMiddleware();
 $app->addRoutingMiddleware();
 
 $app->addErrorMiddleware(true, true, true, $container->get("logger"));
+
+$webRoutes = require INC_ROOT . "/../routes/web.php";
+$webRoutes($app);
