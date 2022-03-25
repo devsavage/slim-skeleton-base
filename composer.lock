@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "fe268ec021ca49631bb9ddafa46e9502",
+    "content-hash": "3977aeb5b5661d2ea73ee0198b7d8d0f",
     "packages": [
         {
             "name": "brick/math",
@@ -1144,6 +1144,47 @@
                 }
             ],
             "time": "2021-09-25T23:10:38+00:00"
+        },
+        {
+            "name": "savagedev/savagedev-php-di-slim-bridge",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/savagedevio/savagedev-php-di-slim-bridge.git",
+                "reference": "b612ea5ad71db15f378f2fdea32e1c2a63b914c6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/savagedevio/savagedev-php-di-slim-bridge/zipball/b612ea5ad71db15f378f2fdea32e1c2a63b914c6",
+                "reference": "b612ea5ad71db15f378f2fdea32e1c2a63b914c6",
+                "shasum": ""
+            },
+            "require": {
+                "php-di/php-di": "v7.x-dev",
+                "slim/slim": "^4.9"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "SavageDev\\DI\\Bridge\\Slim\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Savage",
+                    "email": "savage@savagedev.io"
+                }
+            ],
+            "description": "PHP-DI bridge for Slim 4 with fixes for psr/container v2. This package will be inactive when and if slim-bridge package is update.",
+            "support": {
+                "issues": "https://github.com/savagedevio/savagedev-php-di-slim-bridge/issues",
+                "source": "https://github.com/savagedevio/savagedev-php-di-slim-bridge/tree/1.0.0"
+            },
+            "time": "2022-03-25T01:51:51+00:00"
         },
         {
             "name": "slim/psr7",

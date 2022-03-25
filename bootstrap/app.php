@@ -1,7 +1,8 @@
 <?php
 
-use App\DI\Bridge\Slim\Bridge;
 use DI\ContainerBuilder;
+use App\Http\Handlers\ErrorHandler;
+use SavageDev\DI\Bridge\Slim\Bridge;
 
 define("INC_ROOT", __DIR__);
 
@@ -24,11 +25,15 @@ $settings = $container->get("settings");
 $app = Bridge::create($container);
 $app->setBasePath($settings["base_path"]);
 
+$responseFactory = $app->getResponseFactory();
+$container->set(\Psr\Http\Message\ResponseFactoryInterface::class, $responseFactory);
+
 $app->addBodyParsingMiddleware();
 
 $app->addRoutingMiddleware();
 
-$app->addErrorMiddleware(true, true, true, $container->get("logger"));
+$errorMiddleware = $app->addErrorMiddleware(true, true, true, $container->get("logger"));
+$errorMiddleware->setDefaultErrorHandler(new ErrorHandler($container));
 
 $webRoutes = require INC_ROOT . "/../routes/web.php";
 $webRoutes($app);

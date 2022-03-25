@@ -19,7 +19,8 @@
         "symfony/console": "^6.0",
         "monolog/monolog": "^2.4",
         "slim/psr7": "^1.5",
-        "ramsey/uuid": "^4.2"
+        "ramsey/uuid": "^4.2",
+        "savagedev/savagedev-php-di-slim-bridge": "^1.0"
     },
     "require-dev": {
         "symfony/var-dumper": "^6.0"
