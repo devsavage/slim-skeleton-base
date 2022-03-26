@@ -3,6 +3,7 @@
 use DI\ContainerBuilder;
 use App\Http\Handlers\ErrorHandler;
 use SavageDev\DI\Bridge\Slim\Bridge;
+use Symfony\Component\Finder\Finder;
 
 define("INC_ROOT", __DIR__);
 
@@ -37,3 +38,19 @@ $errorMiddleware->setDefaultErrorHandler(new ErrorHandler($container));
 
 $webRoutes = require INC_ROOT . "/../routes/web.php";
 $webRoutes($app);
+
+// Ensure we have our module directory ready for any modules to use
+
+$moduleDir = INC_ROOT . "/modules/";
+
+if(file_exists($moduleDir) && is_dir($moduleDir)) {
+    $files = [];
+
+    $modulePath = realpath($moduleDir);
+
+    foreach(Finder::create()->files()->name("*.php")->in($modulePath) as $file) {
+        require $file->getRealPath();
+    }
+} else {
+    mkdir($moduleDir);
+}
