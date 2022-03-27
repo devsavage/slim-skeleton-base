@@ -19,6 +19,43 @@ $builder = new ContainerBuilder();
 $appConfig = require INC_ROOT . "/../config/app.php";
 $appConfig($builder);
 
+/**
+ * Module bootstrap
+ */
+
+$moduleDir = INC_ROOT . "/modules/";
+
+if(file_exists($moduleDir) && is_dir($moduleDir)) {
+    $files = [];
+
+    $modulePath = realpath($moduleDir);
+
+    foreach(Finder::create()->files()->name("*.php")->in($modulePath) as $file) {
+        require $file->getRealPath();
+    }
+} else {
+    mkdir($moduleDir);
+}
+
+/**
+ * Module config
+ */
+
+$configModuleDir = INC_ROOT . "/../config/modules/";
+
+if(file_exists($configModuleDir) && is_dir($configModuleDir)) {
+    $files = [];
+
+    $modulePath = realpath($configModuleDir);
+
+    foreach(Finder::create()->files()->name("*.php")->in($modulePath) as $file) {
+        $moduleConfig = require $file->getRealPath();
+        $moduleConfig($builder);
+    }
+} else {
+    mkdir($configModuleDir);
+}
+
 $container = $builder->build();
 
 $settings = $container->get("settings");
@@ -38,19 +75,3 @@ $errorMiddleware->setDefaultErrorHandler(new ErrorHandler($container));
 
 $webRoutes = require INC_ROOT . "/../routes/web.php";
 $webRoutes($app);
-
-// Ensure we have our module directory ready for any modules to use
-
-$moduleDir = INC_ROOT . "/modules/";
-
-if(file_exists($moduleDir) && is_dir($moduleDir)) {
-    $files = [];
-
-    $modulePath = realpath($moduleDir);
-
-    foreach(Finder::create()->files()->name("*.php")->in($modulePath) as $file) {
-        require $file->getRealPath();
-    }
-} else {
-    mkdir($moduleDir);
-}

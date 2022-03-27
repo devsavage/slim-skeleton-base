@@ -28,7 +28,7 @@ return function (ContainerBuilder $builder) {
             return new LoggerFactory($container->get("settings")["logger"]);
         },
 
-        "logger" => function($container) {
+        "logger" => function(ContainerInterface $container) {
             return $container->get(LoggerFactory::class)->addFileHandler("error.log")->createLogger();
         },
 
