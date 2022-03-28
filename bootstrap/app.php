@@ -1,6 +1,7 @@
 <?php
 
 use DI\ContainerBuilder;
+use Slim\Views\TwigMiddleware;
 use App\Http\Handlers\ErrorHandler;
 use SavageDev\DI\Bridge\Slim\Bridge;
 use Symfony\Component\Finder\Finder;
@@ -18,24 +19,6 @@ $builder = new ContainerBuilder();
 
 $appConfig = require INC_ROOT . "/../config/app.php";
 $appConfig($builder);
-
-/**
- * Module bootstrap
- */
-
-$moduleDir = INC_ROOT . "/modules/";
-
-if(file_exists($moduleDir) && is_dir($moduleDir)) {
-    $files = [];
-
-    $modulePath = realpath($moduleDir);
-
-    foreach(Finder::create()->files()->name("*.php")->in($modulePath) as $file) {
-        require $file->getRealPath();
-    }
-} else {
-    mkdir($moduleDir);
-}
 
 /**
  * Module config
@@ -66,9 +49,32 @@ $app->setBasePath($settings["base_path"]);
 $responseFactory = $app->getResponseFactory();
 $container->set(\Psr\Http\Message\ResponseFactoryInterface::class, $responseFactory);
 
+$routeParser = $app->getRouteCollector()->getRouteParser();
+$container->set(Slim\Interfaces\RouteParserInterface::class, $routeParser);
+
 $app->addBodyParsingMiddleware();
 
 $app->addRoutingMiddleware();
+
+$app->add(TwigMiddleware::createFromContainer($app));
+
+/**
+ * Module bootstrap
+ */
+
+$moduleDir = INC_ROOT . "/modules/";
+
+if(file_exists($moduleDir) && is_dir($moduleDir)) {
+    $files = [];
+
+    $modulePath = realpath($moduleDir);
+
+    foreach(Finder::create()->files()->name("*.php")->in($modulePath) as $file) {
+        require $file->getRealPath();
+    }
+} else {
+    mkdir($moduleDir);
+}
 
 $errorMiddleware = $app->addErrorMiddleware(true, true, true, $container->get("logger"));
 $errorMiddleware->setDefaultErrorHandler(new ErrorHandler($container));
