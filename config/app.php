@@ -2,7 +2,7 @@
 
 use Slim\Views\Twig;
 use DI\ContainerBuilder;
-use App\Logger\LoggerFactory;
+use SlimSkeleton\Logger\LoggerFactory;
 use Psr\Container\ContainerInterface;
 
 return function (ContainerBuilder $builder) {

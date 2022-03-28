@@ -5,26 +5,21 @@
     "autoload": {
         "psr-4": {
             "App\\": "app/App"
-        },
-        "files": [
-            "app/helpers.php"
-        ]
+        }
     },
     "require": {
-        "slim/slim": "^4.10",
         "twig/twig": "^3.3",
         "slim/twig-view": "^3.3",
         "vlucas/phpdotenv": "^5.4",
-        "php-di/php-di": "v7.x-dev",
-        "symfony/console": "^6.0",
-        "monolog/monolog": "^2.4",
-        "slim/psr7": "^1.5",
-        "ramsey/uuid": "^4.2",
-        "savagedev/savagedev-php-di-slim-bridge": "^1.0",
-        "symfony/finder": "^6.0"
+        "savagedev/slim-skeleton-helpers": "*"
     },
     "require-dev": {
         "symfony/var-dumper": "^6.0"
+    },
+    "scripts": {
+        "post-root-package-install": [
+            "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
+        ]
     },
     "license": "MIT",
     "authors": [
@@ -32,5 +27,6 @@
             "name": "Savage",
             "email": "savage@savagedev.io"
         }
-    ]
+    ],
+    "minimum-stability": "dev"
 }

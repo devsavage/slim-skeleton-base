@@ -17,7 +17,7 @@ class Controller
         $this->_router = $container->get(RouteParserInterface::class);
     }
 
-    protected function __get($property) 
+    public function __get($property) 
     {
         if ($this->_container->has($property)) {
             return $this->_container->get($property);
