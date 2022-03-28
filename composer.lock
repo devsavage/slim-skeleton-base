@@ -1199,12 +1199,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/devsavage/slim-skeleton-helpers.git",
-                "reference": "9fa21bdec99961242c69e7c7aa3ff4c8d6c3c58a"
+                "reference": "70e676c468f0707749d01c11a3cb2a1b0643c4df"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/devsavage/slim-skeleton-helpers/zipball/9fa21bdec99961242c69e7c7aa3ff4c8d6c3c58a",
-                "reference": "9fa21bdec99961242c69e7c7aa3ff4c8d6c3c58a",
+                "url": "https://api.github.com/repos/devsavage/slim-skeleton-helpers/zipball/70e676c468f0707749d01c11a3cb2a1b0643c4df",
+                "reference": "70e676c468f0707749d01c11a3cb2a1b0643c4df",
                 "shasum": ""
             },
             "require": {
@@ -1243,9 +1243,9 @@
             "description": "Helpers classes for slim-skeleton",
             "support": {
                 "issues": "https://github.com/devsavage/slim-skeleton-helpers/issues",
-                "source": "https://github.com/devsavage/slim-skeleton-helpers/tree/1.0.0"
+                "source": "https://github.com/devsavage/slim-skeleton-helpers/tree/1.0.1"
             },
-            "time": "2022-03-28T03:14:06+00:00"
+            "time": "2022-03-28T03:30:38+00:00"
         },
         {
             "name": "slim/psr7",
