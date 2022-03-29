@@ -35,8 +35,6 @@ if(file_exists($configModuleDir) && is_dir($configModuleDir)) {
         $moduleConfig = require $file->getRealPath();
         $moduleConfig($builder);
     }
-} else {
-    mkdir($configModuleDir);
 }
 
 $container = $builder->build();
@@ -72,8 +70,6 @@ if(file_exists($moduleDir) && is_dir($moduleDir)) {
     foreach(Finder::create()->files()->name("*.php")->in($modulePath) as $file) {
         require $file->getRealPath();
     }
-} else {
-    mkdir($moduleDir);
 }
 
 $errorMiddleware = $app->addErrorMiddleware(true, true, true, $container->get("logger"));
