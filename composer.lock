@@ -1063,12 +1063,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/ramsey/uuid.git",
-                "reference": "115ec653d808bb221038f327a8ab88d4f97779a5"
+                "reference": "418e9c633917184aa85dda4b5959620e6d97897a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ramsey/uuid/zipball/115ec653d808bb221038f327a8ab88d4f97779a5",
-                "reference": "115ec653d808bb221038f327a8ab88d4f97779a5",
+                "url": "https://api.github.com/repos/ramsey/uuid/zipball/418e9c633917184aa85dda4b5959620e6d97897a",
+                "reference": "418e9c633917184aa85dda4b5959620e6d97897a",
                 "shasum": ""
             },
             "require": {
@@ -1150,7 +1150,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2022-03-28T01:55:27+00:00"
+            "time": "2022-03-28T03:56:29+00:00"
         },
         {
             "name": "savagedev/savagedev-php-di-slim-bridge",
@@ -1199,12 +1199,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/devsavage/slim-skeleton-helpers.git",
-                "reference": "70e676c468f0707749d01c11a3cb2a1b0643c4df"
+                "reference": "fc6c127e848c85fca779c80ff715ea69b01c795b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/devsavage/slim-skeleton-helpers/zipball/70e676c468f0707749d01c11a3cb2a1b0643c4df",
-                "reference": "70e676c468f0707749d01c11a3cb2a1b0643c4df",
+                "url": "https://api.github.com/repos/devsavage/slim-skeleton-helpers/zipball/fc6c127e848c85fca779c80ff715ea69b01c795b",
+                "reference": "fc6c127e848c85fca779c80ff715ea69b01c795b",
                 "shasum": ""
             },
             "require": {
@@ -1243,9 +1243,9 @@
             "description": "Helpers classes for slim-skeleton",
             "support": {
                 "issues": "https://github.com/devsavage/slim-skeleton-helpers/issues",
-                "source": "https://github.com/devsavage/slim-skeleton-helpers/tree/1.0.1"
+                "source": "https://github.com/devsavage/slim-skeleton-helpers/tree/master"
             },
-            "time": "2022-03-28T03:30:38+00:00"
+            "time": "2022-03-29T02:38:03+00:00"
         },
         {
             "name": "slim/psr7",
