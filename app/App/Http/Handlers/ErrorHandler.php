@@ -34,8 +34,10 @@ class ErrorHandler implements ErrorHandlerInterface
                     "description" => $exception->getDescription(),
                 ]);
             default:
+                $this->_logger->error($exception->getMessage());
+                $this->_logger->error($exception->getTraceAsString());
+
                 $response = $this->_response->createResponse(500);
-                
                 return $this->_view->render($response, "error/500.twig", [
                     "title" => "{$exception->getCode()} {$exception->getMessage()}",
                     "description" => $exception->getMessage(),
