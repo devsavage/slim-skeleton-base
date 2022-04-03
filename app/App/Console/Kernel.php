@@ -15,7 +15,7 @@ class Kernel implements KernelInterface
         \SlimSkeleton\Console\Commands\Generator\ControllerGeneratorCommand::class,
     ];
 
-    public function getCommands()
+    public function getCommands(): array
     {
         return array_merge($this->defaultCommands, $this->moduleCommands);
     }

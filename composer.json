@@ -28,5 +28,6 @@
             "email": "savage@savagedev.io"
         }
     ],
-    "minimum-stability": "dev"
+    "minimum-stability": "dev",
+    "prefer-stable": true
 }

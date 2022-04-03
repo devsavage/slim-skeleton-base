@@ -77,3 +77,16 @@ $errorMiddleware->setDefaultErrorHandler(new ErrorHandler($container));
 
 $webRoutes = require INC_ROOT . "/../routes/web.php";
 $webRoutes($app);
+
+$moduleRoutesDir = INC_ROOT . "/../routes/modules/";
+
+if(file_exists($moduleRoutesDir) && is_dir($moduleRoutesDir)) {
+    $files = [];
+
+    $modulePath = realpath($moduleRoutesDir);
+
+    foreach(Finder::create()->files()->name("*.php")->in($modulePath) as $file) {
+        $moduleRoutes = require $file->getRealPath();
+        $moduleRoutes($app);
+    }
+}
