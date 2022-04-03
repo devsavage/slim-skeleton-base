@@ -11,7 +11,7 @@
         "twig/twig": "^3.3",
         "slim/twig-view": "^3.3",
         "vlucas/phpdotenv": "^5.4",
-        "savagedev/slim-skeleton-helpers": "*"
+        "savagedev/slim-skeleton-helpers": "^1.1.0"
     },
     "require-dev": {
         "symfony/var-dumper": "^6.0"

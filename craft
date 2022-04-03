@@ -7,7 +7,7 @@ const VERSION = "v1.0.0";
 
 $kernel = new App\Console\Kernel;
 
-$console = new SlimSkeleton\Console\Console($app, VERSION);
+$console = new SlimSkeleton\Console\Console($app, VERSION, __DIR__);
 $console->boot($kernel);
 
 $console->run();

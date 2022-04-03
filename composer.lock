@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "cc44cc3ae2020e001b0fc5c9c425c0ec",
+    "content-hash": "c80a86d806f10d53405ecef4f2214cfa",
     "packages": [
         {
             "name": "brick/math",
@@ -1184,16 +1184,16 @@
         },
         {
             "name": "savagedev/slim-skeleton-helpers",
-            "version": "1.0.3",
+            "version": "1.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/devsavage/slim-skeleton-helpers.git",
-                "reference": "1230311377caf0a3c169c6c818b55b5d24999b5f"
+                "reference": "2321e7116de35fa03174900a9c5d325efea24e70"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/devsavage/slim-skeleton-helpers/zipball/1230311377caf0a3c169c6c818b55b5d24999b5f",
-                "reference": "1230311377caf0a3c169c6c818b55b5d24999b5f",
+                "url": "https://api.github.com/repos/devsavage/slim-skeleton-helpers/zipball/2321e7116de35fa03174900a9c5d325efea24e70",
+                "reference": "2321e7116de35fa03174900a9c5d325efea24e70",
                 "shasum": ""
             },
             "require": {
@@ -1231,9 +1231,9 @@
             "description": "Helpers classes for slim-skeleton",
             "support": {
                 "issues": "https://github.com/devsavage/slim-skeleton-helpers/issues",
-                "source": "https://github.com/devsavage/slim-skeleton-helpers/tree/1.0.3"
+                "source": "https://github.com/devsavage/slim-skeleton-helpers/tree/1.1.0"
             },
-            "time": "2022-03-30T02:27:42+00:00"
+            "time": "2022-04-03T19:41:05+00:00"
         },
         {
             "name": "slim/psr7",
@@ -1499,16 +1499,16 @@
         },
         {
             "name": "symfony/console",
-            "version": "v6.0.5",
+            "version": "v6.0.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/console.git",
-                "reference": "3bebf4108b9e07492a2a4057d207aa5a77d146b1"
+                "reference": "70dcf7b2ca2ea08ad6ebcc475f104a024fb5632e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/console/zipball/3bebf4108b9e07492a2a4057d207aa5a77d146b1",
-                "reference": "3bebf4108b9e07492a2a4057d207aa5a77d146b1",
+                "url": "https://api.github.com/repos/symfony/console/zipball/70dcf7b2ca2ea08ad6ebcc475f104a024fb5632e",
+                "reference": "70dcf7b2ca2ea08ad6ebcc475f104a024fb5632e",
                 "shasum": ""
             },
             "require": {
@@ -1574,7 +1574,7 @@
                 "terminal"
             ],
             "support": {
-                "source": "https://github.com/symfony/console/tree/v6.0.5"
+                "source": "https://github.com/symfony/console/tree/v6.0.7"
             },
             "funding": [
                 {
@@ -1590,7 +1590,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2022-02-25T10:48:52+00:00"
+            "time": "2022-03-31T17:18:25+00:00"
         },
         {
             "name": "symfony/finder",
