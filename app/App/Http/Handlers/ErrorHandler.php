@@ -39,8 +39,8 @@ class ErrorHandler implements ErrorHandlerInterface
 
                 $response = $this->_response->createResponse(500);
                 return $this->_view->render($response, "error/500.twig", [
-                    "title" => "{$exception->getCode()} {$exception->getMessage()}",
-                    "description" => $exception->getMessage(),
+                    "title" => "Server Error",
+                    "description" => "An exception has occurred and we cannot continue.",
                 ]);
         }
     }

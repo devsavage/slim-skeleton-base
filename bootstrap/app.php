@@ -6,6 +6,8 @@ use App\Http\Handlers\ErrorHandler;
 use SavageDev\DI\Bridge\Slim\Bridge;
 use Symfony\Component\Finder\Finder;
 
+session_start();
+
 define("INC_ROOT", __DIR__);
 
 require INC_ROOT . "/../vendor/autoload.php";
